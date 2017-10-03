@@ -18,6 +18,22 @@ public class Donut
 		this.holeCount = holeCount;
 	}
 	
+	public Donut()
+	{
+		this.hasSprinkles = false;
+		this.isGlazed = false;
+		this.shape = "round";
+		this.flavor = "plain";
+		this.holeCount = 1;
+	}
+	
+	public String toString()
+	{
+		String description = "This donut is a " + flavor + "donut";
+		
+		return description;
+	}
+	
 	//Getters
 	public boolean getHasSprinkles()
 	{
