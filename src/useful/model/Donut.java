@@ -8,6 +8,7 @@ public class Donut
 	private String flavor;
 	private int holeCount;
 	
+	//This is the constructor which creates a Donut object, and because it's an object, it can be stored in a list
 	public Donut(boolean hasSprinkles, boolean isGlazed, String shape, String flavor, int holeCount)
 	{
 		this.hasSprinkles = hasSprinkles;
