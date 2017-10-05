@@ -8,16 +8,6 @@ public class Donut
 	private String flavor;
 	private int holeCount;
 	
-	//This is the constructor which creates a Donut object, and because it's an object, it can be stored in a list
-	public Donut(boolean hasSprinkles, boolean isGlazed, String shape, String flavor, int holeCount)
-	{
-		this.hasSprinkles = hasSprinkles;
-		this.isGlazed = isGlazed;
-		this.shape = shape;
-		this.flavor = flavor;
-		this.holeCount = holeCount;
-	}
-	
 	public Donut()
 	{
 		this.hasSprinkles = false;
@@ -27,22 +17,11 @@ public class Donut
 		this.holeCount = 1;
 	}
 	
-	public String toString()
+	public Donut(String flavor)
 	{
-		String description = "This donut is a " + flavor + "donut";
-		
-		return description;
+		this.flavor = flavor;
 	}
 	
-	//Getters
-	public boolean getHasSprinkles()
-	{
-		return hasSprinkles;
-	}
-	public boolean getIsGlazed()
-	{
-		return isGlazed;
-	}
 	public String getShape()
 	{
 		return shape;
@@ -51,30 +30,16 @@ public class Donut
 	{
 		return flavor;
 	}
-	public int getHoleCount()
-	{
-		return holeCount;
-	}
 	
-	//Setters
-	public void setHasSprinkles(boolean hasSprinkles)
-	{
-		this.hasSprinkles = hasSprinkles;
-	}
-	public void setIsGlazed(boolean isGlazed)
-	{
-		this.isGlazed = isGlazed;
-	}
 	public void setShape(String shape)
 	{
 		this.shape = shape;
 	}
-	public void setFlavor(String flavor)
+	
+	public String toString()
 	{
-		this.flavor = flavor;
-	}
-	public void setHoleCount(int holeCount)
-	{
-		this.holeCount = holeCount;
+		String description = "This donut is a " + flavor + "donut.";
+		
+		return description;
 	}
 }

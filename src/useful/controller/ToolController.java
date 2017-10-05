@@ -28,17 +28,17 @@ public class ToolController
 	{
 		for(int index = 0; index < donutList.size(); index ++)
 		{
-			display.displayText(donutList.get(index));
+			display.displayText(donutList.get(index).toString());
 		}
 	}
 	
 	private void fillTheList()
 	{
-		Donut jellyFilled = new Donut(false, false, null, "Jelly-Filled", 0);
-		Donut glazed = new Donut(false, false, null, "Glazed", 0);
-		Donut maple = new Donut(false, false, null, "Maple", 0);
-		Donut chocolate = new Donut(false, false, null, "Chocolate", 0);
-		Donut vanillaCustard = new Donut(false, false, null, "Vanilla Custard", 0);
+		Donut jellyFilled = new Donut("Jelly-Filled");
+		Donut glazed = new Donut("Glazed");
+		Donut maple = new Donut("Maple");
+		Donut chocolate = new Donut("Chocolate");
+		Donut vanillaCustard = new Donut("Vanilla Custard");
 		
 		donutList.add(jellyFilled);
 		donutList.add(glazed);
