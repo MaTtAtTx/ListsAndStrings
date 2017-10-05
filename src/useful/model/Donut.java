@@ -38,7 +38,7 @@ public class Donut
 	
 	public String toString()
 	{
-		String description = "This donut is a " + flavor + "donut.";
+		String description = "This donut is a " + flavor + " donut.";
 		
 		return description;
 	}

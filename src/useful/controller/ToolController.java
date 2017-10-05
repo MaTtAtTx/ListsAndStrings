@@ -22,13 +22,23 @@ public class ToolController
 		
 		donutList.add(temp);
 		fillTheList();
+		showTheList();
 	}
 	
 	private void showTheList()
 	{
+		String favorite = "Maple Glazed";
 		for(int index = 0; index < donutList.size(); index ++)
 		{
+			String currentFlavor = donutList.get(index).getFlavor();
 			display.displayText(donutList.get(index).toString());
+			if (currentFlavor.equalsIgnoreCase(favorite))
+			{
+				for (int woop = 0; woop < 5; woop += 1)
+				{
+					display.displayText(currentFlavor + " is the best flavor ever!!!!!");
+				}
+			}
 		}
 	}
 	
@@ -36,7 +46,7 @@ public class ToolController
 	{
 		Donut jellyFilled = new Donut("Jelly-Filled");
 		Donut glazed = new Donut("Glazed");
-		Donut maple = new Donut("Maple");
+		Donut maple = new Donut("Maple Glazed");
 		Donut chocolate = new Donut("Chocolate");
 		Donut vanillaCustard = new Donut("Vanilla Custard");
 		
