@@ -49,12 +49,16 @@ public class ToolController
 	private void fillTheList()
 	{
 		Donut jellyFilled = new Donut("Jelly-Filled");
+		Donut raspberryFilled = new Donut("Raspberry-Filled");
+		Donut strawberryFilled = new Donut("Strawberry-Filled");
 		Donut glazed = new Donut("Glazed");
 		Donut maple = new Donut("Maple Glazed");
 		Donut chocolate = new Donut("Chocolate");
 		Donut vanillaCustard = new Donut("Vanilla Custard");
 		
 		donutList.add(jellyFilled);
+		donutList.add(raspberryFilled);
+		donutList.add(strawberryFilled);
 		donutList.add(glazed);
 		donutList.add(maple);
 		donutList.add(chocolate);
