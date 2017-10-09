@@ -13,7 +13,7 @@ public class Donut
 		this.hasSprinkles = false;
 		this.isGlazed = false;
 		this.shape = "round";
-		this.flavor = "plain";
+		this.flavor = "Plain";
 		this.holeCount = 1;
 	}
 	
