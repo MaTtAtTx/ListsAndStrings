@@ -90,8 +90,21 @@ public class ListController
 		for (int index = donutList.size() - 1; index >= 0; index -= 1)
 		{
 			String flavor = donutList.get(index).getFlavor();
-			display.displayText(flavor + " is the flavor at spot " + (index + 1) + " in the list.");
+			display.displayText(flavor + " is the flavor at index " + index + " in the list.");
 		}
+//		String unconverted = display.getResponse("What donut would you like to eat? (index)");
+//		while (!isValidInteger(unconverted))
+//		{
+//			display.displayText("What donut would you like to eat?? (index)");
+//		}
+//		int donutRemove = 0;
+//		donutRemove = Integer.parseInt(unconverted);
+//		if (donutRemove >= donutList.size() || donutRemove < 0)
+//		{
+//			unconverted = display.getResponse("That is not a valid index for a donut. Please try again.");
+//		}
+//		Donut removed2 = donutList.remove(donutRemove);
+//		display.displayText("The donut with the flavor " + removed2.getFlavor() + " was removed from index position " + donutRemove + ".");
 	}
 	
 	public ArrayList<Donut> getDonutList()
@@ -102,5 +115,22 @@ public class ListController
 	public PopupDisplay getDisplay()
 	{
 		return display;
+	}
+	
+	private boolean isValidInteger(String sampleInt)
+	{
+		boolean valid = false;
+		
+		try
+		{
+			Integer.parseInt(sampleInt);
+			valid = true;
+		}
+		catch (NumberFormatException error)
+		{
+			display.displayText("Only integer values are valid: " + sampleInt + " is not.");
+		}
+		
+		return valid;
 	}
 }
