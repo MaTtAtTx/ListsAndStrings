@@ -29,7 +29,7 @@ public class ListController
 	
 	private void showTheList()
 	{
-		String favorite = "Maple Glazed";
+		String favorite = "maple glazed";
 		for(int index = 0; index < donutList.size(); index ++)
 		{
 			String currentFlavor = donutList.get(index).getFlavor();
@@ -50,11 +50,11 @@ public class ListController
 	
 	private void fillTheList()
 	{
-		Donut jellyFilled = new Donut("Jelly-Filled");
-		Donut glazed = new Donut("Glazed");
-		Donut maple = new Donut("Maple Glazed");
-		Donut chocolate = new Donut("Chocolate");
-		Donut vanillaCustard = new Donut("Vanilla Custard");
+		Donut jellyFilled = new Donut("jelly-filled");
+		Donut glazed = new Donut("glazed");
+		Donut maple = new Donut("maple glazed");
+		Donut chocolate = new Donut("chocolate");
+		Donut vanillaCustard = new Donut("vanilla custard");
 		
 		donutList.add(jellyFilled);
 		donutList.add(glazed);
@@ -78,7 +78,7 @@ public class ListController
 	
 	private void testTheList()
 	{
-		Donut chocolateSprinkles = new Donut("Chocolate w/ Sprinkles");
+		Donut chocolateSprinkles = new Donut("chocolate w/ sprinkles");
 		donutList.add(chocolateSprinkles);
 		Donut removed = donutList.remove(1);
 		display.displayText("The " + removed.getFlavor() + " donut was removed from the list.");
@@ -90,7 +90,7 @@ public class ListController
 		for (int index = donutList.size() - 1; index >= 0; index -= 1)
 		{
 			String flavor = donutList.get(index).getFlavor();
-			display.displayText(flavor + " is the flavor at index " + index + " in the list.");
+			display.displayText("The " + flavor + " donut is the flavor at index " + index + " in the list.");
 		}
 //		String unconverted = display.getResponse("What donut would you like to eat? (index)");
 //		while (!isValidInteger(unconverted))
