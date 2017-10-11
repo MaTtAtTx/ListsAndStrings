@@ -19,12 +19,48 @@ public class ListController
 	public void start()
 	{
 		Donut temp = new Donut();
-		donutList.add(temp);
+		ArrayList<String> tempList = new ArrayList<String>();
+		tempList.add("this is a word sequence");
+		tempList.add("DonutTests.zip");
+		tempList.add("");
+		tempList.add("My name is Inigo Montoya");
+		tempList.add("TESTETSETSETESTSETSETSETSETSETSETSETSETSEETSE");
 		
+		display.displayText("The longest string in the tempList is: " + maxLength(tempList) + " characters long.");
+		display.displayText("It it: " + longestString(tempList) + ".");
+
 		fillTheList();
 		changeTheList();
 //		showTheList();
 		testTheList();
+	}
+	
+	public int maxLength(ArrayList<String> myList)
+	{
+		int max = 0;
+		for (int index = 0; index < myList.size(); index += 1)
+		{
+			if (max < myList.get(index).length())
+			{
+				max = myList.get(index).length();
+			}
+		}
+		return max;
+	}
+	
+	public String longestString(ArrayList<String> myList)
+	{
+		String longest = "";
+		int max = 0;
+		for (int index = 0; index < myList.size(); index += 1)
+		{
+			if (max < myList.get(index).length())
+			{
+				max = myList.get(index).length();
+				longest = myList.get(index);
+			}
+		}
+		return longest;
 	}
 	
 	private void showTheList()
